@@ -31,6 +31,9 @@
     <Compile Include="List.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Put.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="SftpUtil.py" />
     <Compile Include="SftpUtilException.py">
       <SubType>Code</SubType>

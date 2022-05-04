@@ -21,9 +21,9 @@ class List:
                    'param' : {'client' : client}
         })
 
-    def ls(self):
+    def ls(self, path='.'):
         """
-        自身のフォルダ内のファイルの一覧を取得する
+        フォルダ内のファイルの一覧を取得する
         """
         logging.debug({'status' : 'run',
             'param' : None
@@ -31,7 +31,7 @@ class List:
         sftp_connection = self.client.open_sftp()
 
         # ファイル一覧の取得
-        entries = sftp_connection.listdir()
+        entries = sftp_connection.listdir(path)
         logging.debug({'status' : 'success',
             'param' : None,
             'result' : entries
